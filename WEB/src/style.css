@@ -1,0 +1,82 @@
+
+body {
+    
+    min-width: 400px; /* A body minimális szélessége 400px */
+    background-image: url('bg.jpg'); /* Háttérkép beállítása */
+    background-size: cover; /* A háttérkép méretének beállítása úgy, hogy kitöltse a teljes háttérfelületet */
+    background-repeat: no-repeat; /* Háttérkép ismétlődésének kikapcsolása */
+}
+h1 {
+    margin-top: 2vh; /* Felső margó 2vh */
+    text-align: center;
+    position: center;
+    background-color: rgba(161, 211, 54, 0.6); /* Háttérszín 60%-os fedettséggel */
+    color: white; /* Betűszín fehér */
+    font-size: 10rem; /* Méret 20rem */
+    padding: 20px; /* Margó beállítása */
+    margin: 10px; /* Margó beállítása */
+    /* További stílusok */
+}
+.container {
+
+    
+    width: 50vw; /* Keret szélessége 50vw */
+    border: 10px solid #a1d336; /* 10px-es folytonos vonalú keret #a1d336 színnel */
+    border-radius: 3rem; /* 3rem-es lekerekítés */
+    margin: 0 auto;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-image {
+    width: 150px; /* Átméretezés szükség szerint */
+    height: auto; /* Átméretezés szükség szerint */
+    margin: 10px; /* Margó beállítása */
+}
+
+.book-image:hover {
+    cursor: pointer; /* Egérkurzor beállítása */
+    transform: scale(1.1); /* Átméretezés hover állapotban */
+}
+.book-image:nth-child(2) {
+    transform: rotate(180deg); /* Elforgatás 180 fokkal */
+    margin-top: 20px; /* Felső margó hozzáadása a lebegtetéshez */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Árnyék hozzáadása a lebegtetéshez */
+}
+
+.book-image:nth-child(2):hover {
+    transform: rotate(180deg) scale(1.1); /* Elforgatás és átméretezés hover állapotban */
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 90vw; /* 90% szélesség az alacsonyabb felbontásokhoz */
+    }
+
+    .image {
+        width: 100%; /* A képek szélessége 50%-ra csökken */
+        margin: 0 auto 20px; /* Középre igazítás és 20px margó alul */
+        transform: rotate(0deg); /* Elforgatás vissza 0 fokra */
+        display: block; /* Blokk elemmé alakítás (egymás alá kerüléshez) */
+    }
+    h1 {
+        font-size: 10rem; /* Címsor mérete 10rem */
+        margin-top: 2vh; /* Felső margó 2vh */
+    }
+    .container {
+        display: none; /* A keret eltüntetése */
+        margin-top: 5vh; /* Felső margó 5vh */
+        width: 100%; /* Teljes szélességű */
+    }
+    .book-img {
+        width: 80%; /* A képek elfoglalják a rendelkezésre álló hely 80%-át */
+        margin: 2rem auto; /* Ízléses margóval helyezzük el őket egymás alá */
+    }
+    
+    .book-img:nth-child(2) {
+        transform: none; /* A második kép ne legyen elforgatva */
+    }
+}
